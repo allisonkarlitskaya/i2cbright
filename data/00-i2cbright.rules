@@ -1,0 +1,2 @@
+SUBSYSTEMS=="drm" ATTR{name}=="*DDI*" SUBSYSTEM=="i2c" RUN{program}="/usr/sbin/modprobe i2c-dev"
+SUBSYSTEMS=="drm" ATTR{name}=="*DDI*" SUBSYSTEM=="i2c-dev" TAG+="uaccess"

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "i2cbright"
+version = "0"
+description = "Set brightness via i2c using DDC protocol"
+authors = [{name = "Allison Karlitskaya", email = "allison.karlitskaya@redhat.com"}]
+license = {file = "COPYING"}
+readme = "README.md"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+
+[tool.setuptools.data-files]
+"lib/udev/rules.d" = ["data/00-i2cbright.rules"]
+
+[project.urls]
+Home = "https://github.com/allisonkarlitskaya/i2cbright/"
+
+[project.scripts]
+i2cbright = "i2cbright:main"
